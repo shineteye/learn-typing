@@ -14,7 +14,7 @@ export default function LandingPage() {
                     <h1 className='text-4xl font-bold text-darkBlue my-10 text-center md:text-left md:self-start'>
                         What's Our Mission
                     </h1>
-                    <p className='text-xl self-center md:text-3xl md:text-left '>
+                    <p className='text-xl self-center text-center md:text-3xl md:text-left '>
                         We exist only to boost your typing speed
                     </p>
                 </div>
