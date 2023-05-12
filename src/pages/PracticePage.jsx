@@ -105,18 +105,18 @@ export default function PracticePage() {
             <div className='mx-auto'>
                 <div className='flex flex-col items-center'>
                     <Link to='/videotutorials'>
-                        <div className='flex self-center bg-darkBlue py-2 px-10 my-6 text-white font-bold text-lg rounded-full items-center justify-center w-20'>
+                        <div className='flex self-center hover:bg-darkBlue hover:py-2 hover:px-10 my-6 text-darkBlue hover:text-white font-bold text-lg rounded-full items-center justify-center w-1/2'>
                             Back
                         </div>
                     </Link>
-                    <div className='flex self-center bg-darkBlue py-2 px-10 mb-3 text-white font-bold text-xl justify-between rounded-sm'>
+                    <div className='flex self-center bg-darkBlue py-2 px-10 mb-3 text-white font-bold text-xl justify-between rounded-lg'>
                         <p className='mx-4'>Accuracy: {accuracy.toFixed(2)}%</p>
                         <p className='mx-4'>WPM: {typingSpeed}</p>
                     </div>
-                    <div className='flex '>
-                        <div className='flex flex-col my-4 mx-auto w-2/5 '>
+                    <div className='flex items-center justify-center'>
+                        <div className='flex flex-col my-4 mx-auto w-1/2 '>
                             {generatedParagraph && startTime && (
-                                <p className='grid-2 text-xl mb-10 py-5 mx-5 px-5 font-semibold bg-gray-100 rounded-lg self-center'>
+                                <p className='text-xl mb-10 py-5 px-5 mx-auto font-semibold bg-gray-100 rounded-lg self-center'>
                                     {generatedParagraph.split('').map((char, index) => (
                                         <span className='' key={index} style={{
                                             color:
@@ -129,6 +129,7 @@ export default function PracticePage() {
                             )}
                             {start ?
                                 <textarea
+                                    className='p-5 text-lg my-5 bg-slate-100 rounded-lg'
                                     ref={inputRef}
                                     rows={3}
                                     placeholder='Start typing...'
@@ -137,6 +138,7 @@ export default function PracticePage() {
                                 >
                                 </textarea> :
                                 <textarea
+                                    className='p-5 text-lg my-5 bg-slate-100 rounded-lg'
                                     ref={inputRef}
                                     rows={3}
                                     placeholder='Start Typing on start'
@@ -146,11 +148,11 @@ export default function PracticePage() {
                                 </textarea>}
 
                             {!start ?
-                                <button className='' onClick={handleStart}>Start</button> : (
-                                    <div className=''>
+                                <button className='bg-green-500 px-3 py-2 mx-3 self-center' onClick={handleStart}>Start</button> : (
+                                    <div className='bg-blue'>
                                         <>
-                                            <button className='' onClick={handleStop}>Stop</button>
-                                            <button className='' onClick={handleRestart}>Restart</button>
+                                            <button className='bg-red-500 px-3 py-2 mx-3 self-center' onClick={handleStop}>Stop</button>
+                                            <button className='bg-blue-500 px-3 py-2 mx-3 self-center' onClick={handleRestart}>Restart</button>
                                         </>
                                     </div>
                                 )

@@ -8,7 +8,7 @@ export default function ProgressPage() {
                 <Navbar />
             </div>
             <div>
-
+                Progress Page
             </div>
         </div>
     )
