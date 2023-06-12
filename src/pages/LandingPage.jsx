@@ -15,7 +15,7 @@ export default function LandingPage() {
                         What's Our Mission
                     </h1>
                     <p className='text-xl self-center text-center md:text-3xl md:text-left '>
-                        We exist only to boost your typing speed
+                        We exist only to boost your typing speed simple
                     </p>
                 </div>
             </div>
