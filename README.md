@@ -1,70 +1,226 @@
-# Getting Started with Create React App
+# 🎯 Learn Typing - Interactive Typing Practice App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, fast, and engaging typing practice application built with React and Vite. Master your typing skills with real-time feedback, multiple difficulty levels, and comprehensive progress tracking.
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-18.3.1-blue?style=flat&logo=react)
+![Vite](https://img.shields.io/badge/Vite-6.0.1-646CFF?style=flat&logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.18-38B2AC?style=flat&logo=tailwind-css)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=flat&logo=javascript)
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+### 🎮 **Interactive Typing Practice**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Real-time character-by-character feedback** with color coding
+- **Live metrics calculation** (WPM, accuracy, errors)
+- **Pause/Resume functionality** for flexible practice sessions
+- **Automatic completion detection** and results navigation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📊 **Three Difficulty Levels**
 
-### `npm test`
+- 🟢 **Beginner** (Target: 25 WPM) - Basic letters and simple words
+- 🟡 **Intermediate** (Target: 45 WPM) - Common sentences with punctuation
+- 🔴 **Professional** (Target: 65 WPM) - Complex technical content
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🏆 **Achievement System**
 
-### `npm run build`
+- **First Steps** - Complete your first practice session
+- **Speed Demon** - Reach target WPM for your difficulty
+- **Accuracy Master** - Achieve 95%+ accuracy
+- **Perfect Practice** - Complete with 100% accuracy
+- **Consistent Performer** - Complete 5+ sessions
+- **Speed Racer** - Exceed 60 WPM
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📈 **Progress Tracking**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Personal best tracking** for WPM and accuracy
+- **Session history** with detailed statistics
+- **Achievement badges** with unlock conditions
+- **LocalStorage persistence** - your progress is saved automatically
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Quick Start
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Node.js** (v16 or higher)
+- **npm** or **yarn** package manager
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the repository**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   git clone https://github.com/shineteye/learn-typing.git
+   cd learn-typing
+   ```
 
-## Learn More
+2. **Install dependencies**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Start the development server**
 
-### Code Splitting
+   ```bash
+   npm run dev
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Open your browser**
+   Navigate to `http://localhost:5173` (or the port shown in terminal)
 
-### Analyzing the Bundle Size
+## 📝 Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Development
 
-### Making a Progressive Web App
+```bash
+npm run dev          # Start development server with hot reload
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Production
 
-### Advanced Configuration
+```bash
+npm run build        # Build optimized production bundle
+npm run preview      # Preview the production build locally
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Code Quality
 
-### Deployment
+```bash
+npm run lint         # Check code style and potential issues
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🏗️ Project Structure
 
-### `npm run build` fails to minify
+```
+learn-typing/
+├── public/                 # Static assets
+│   ├── favicon.ico
+│   └── manifest.json
+├── src/
+│   ├── components/         # Reusable UI components
+│   │   ├── practice/       # Typing practice components
+│   │   │   ├── TypingControls.jsx
+│   │   │   ├── TypingStats.jsx
+│   │   │   └── TypingText.jsx
+│   │   ├── ui/            # Base UI components
+│   │   │   ├── Button.jsx
+│   │   │   └── Section.jsx
+│   │   └── navbar/
+│   │       └── Navbar.jsx
+│   ├── pages/             # Application pages
+│   │   ├── LandingPage.jsx
+│   │   ├── MenuPage.jsx
+│   │   ├── PracticePage.jsx
+│   │   └── ProgressPage.jsx
+│   ├── contexts/          # React Context providers
+│   │   ├── ModeContext.js
+│   │   └── ScoreContext.js
+│   ├── constants/         # App constants and content
+│   │   └── index.js
+│   ├── utils/            # Helper functions
+│   │   └── index.js
+│   └── styles/           # Design system tokens
+│       └── tokens.js
+├── APPLICATION_GUIDE.md   # Detailed technical documentation
+├── tailwind.config.js    # Tailwind CSS configuration
+├── vite.config.js        # Vite build configuration
+└── package.json
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🎨 How It Works
+
+### Visual Feedback System
+
+The app provides real-time visual feedback as you type:
+
+- 🟢 **Green** - Correctly typed characters
+- 🔴 **Red** - Incorrectly typed characters with error highlighting
+- ⚫ **Gray** - Characters not yet typed
+- 🔵 **Blue** - Current cursor position with animated indicator
+
+### Metrics Calculation
+
+**Words Per Minute (WPM)**
+
+```
+WPM = (Characters Typed ÷ 5) ÷ Time in Minutes
+```
+
+**Accuracy Percentage**
+
+```
+Accuracy = (Correct Characters ÷ Total Typed Characters) × 100
+```
+
+**Real-time Updates**
+
+- Metrics update every 100ms for smooth feedback
+- Precise timing with pause/resume support
+- Error counting with character-by-character validation
+
+## 🛤️ User Journey
+
+1. **Landing Page** - Welcome and introduction to the app
+2. **Menu Page** - Select your difficulty level
+3. **Practice Page** - Interactive typing with real-time feedback
+4. **Progress Page** - View results, achievements, and statistics
+
+## 🔧 Technical Details
+
+### Built With
+
+- **React 18.3.1** - Modern UI library with hooks
+- **Vite 6.0.1** - Next-generation frontend tooling
+- **Tailwind CSS 3.4.18** - Utility-first CSS framework
+- **React Router DOM 6.30.1** - Declarative routing
+- **PostCSS** - CSS processing and optimization
+
+### Key Features
+
+- **Component-based architecture** for maintainability
+- **Context API** for global state management
+- **LocalStorage integration** for data persistence
+- **Responsive design** that works on all devices
+- **Real-time performance monitoring** with optimized re-renders
+
+### Performance Optimizations
+
+- **Vite's fast HMR** for instant development feedback
+- **Optimized re-renders** with useCallback and useMemo
+- **Efficient state updates** with minimal component re-renders
+- **Bundle optimization** with automatic code splitting
+
+## 📖 Documentation
+
+For detailed technical documentation including algorithms, data structures, and implementation details, see:
+
+- **[APPLICATION_GUIDE.md](./APPLICATION_GUIDE.md)** - Comprehensive technical guide
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🎯 Goals & Objectives
+
+This application was designed to:
+
+- **Improve typing speed and accuracy** through structured practice
+- **Provide engaging visual feedback** to maintain user motivation
+- **Track progress over time** with detailed analytics
+- **Offer multiple difficulty levels** for users of all skill levels
+- **Demonstrate modern React development** with best practices
+
+---
+
+**Happy Typing! 🎉**
+
+_Built with ❤️ using React, Vite, and Tailwind CSS_
